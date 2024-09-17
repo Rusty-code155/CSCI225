@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="English">
 <head>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <section>
+    <h1>The Trolley Problem</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XjZHAa4hR68?si=z3GPf-y-HQx6cSB1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     
+    <h2>Feedback </h2>
+    <form name="feedback" action="#" method="post">
+        <!-- User's First Name -->
+        <label for="fn">First Name:</label>
+        <input type="text" id="fn" name="fn" placeholder="John" required>
+        <br>
+
+        <!-- User's Last Name -->
+        <label for="ln">Last Name:</label>
+        <input type="text" id="ln" name="ln" placeholder="Doh " required>
+        <br>
+
+        <!-- Email Address -->
+        <label for="Email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email@email.com">
+        <br>
+            <!-- Date of Birth -->
+        <label for="DB">Date of Birth:</label>
+        <input type="date" id="DB" name="DB" required>
+        <br>
+
+        <!-- Number Input -->
+        <label for="quantity">Number of Visits:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="100" step="1" placeholder="Enter #">
+        <br>
+
+        <!-- Search Input -->
+        <label for="search">Search:</label>
+        <input type="search" id="search" name="search" placeholder="Search our site...">
+        <br>
+
+        <!-- Recommendation Radio Buttons -->
+        <fieldset>
+            <legend>Would you recommend this website?</legend>
+            <label><input type="radio" name="recommend" value="yes"> Yes</label>
+            <label><input type="radio" name="recommend" value="no"> No</label>
+        </fieldset>
+        <br>
+
+        <!-- Favorite Website Selection Box -->
+        <label for="favorite">Favorite Website:</label>
+        <select id="favorite" name="favorite">
+            <option value="google">Google</option>
+            <option value="facebook">Facebook</option>
+            <option value="twitter">Twitter</option>
+            <option value="Time">Time</option>
+            <option value="TikTok">TikTok</option>
+        </select>
+        <br>
+
+        <!-- Rating Range Element -->
+        <label for="rating">Rate this website from 1 to 10:</label>
+        <input type="range" id="rating" name="rating" min="1" max="10" value="5" step="1">
+        <br>
+
+        <!-- Comments Textarea -->
+        <label for="comment">Additional Comments:</label>
+        <textarea id="comment" name="comment" rows="4" cols="50" placeholder="comment"></textarea>
+        <br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Feedback</button>
+    </form>
+</section>
+
+<footer>
+    <p> Turner M. Peeples All rights reserved.</p>
+</footer>
 </body>
 
 </html>
