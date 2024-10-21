@@ -1,0 +1,45 @@
+:root
+{
+    --navbar-color:#0a04014e;
+    --navbar-outline:#0906d3;
+    --navbar-tab-color:#636363;
+    --navbar-tab-outline:#016307;
+    --header-color:#2535de86;
+    --header-color-outline:#676566;
+    --header-text-color:#ffffff;
+    --header-textshadow-color:#000000;
+    --footbar-color:#1414dac0;
+    --footbar-outline:#000000c0;
+    --footbar-text-color:#fcfcfc;
+    --page-width:33vw;
+    --page-height:55vh;
+}
+
+body{
+    background-image: url(../img/R.gif);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+div.navbar{
+    background-color: var(--navbar-color);
+    border: 1px solid var(--navbar-outline);
+    border-radius: 50px 50px 50px 50px / 150px 150px 150px 150px;
+    overflow: hidden;
+    width: 800px;
+    margin: auto;
+  }
+  div.navbar ul{
+    list-style-type: none;
+    margin: auto;
+    padding: 8px;
+}
+
+div.navbar li{
+    display: inline-table;
+    margin-left: 40px;
+    text-align: center;
+}
+
+div.navbar li a{
+    color: rgb(255, 253, 251);
+}
