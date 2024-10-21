@@ -65,25 +65,25 @@
                 </div>
             </div>
             <!-- Email Address -->
-            <label for="Email" id="email">Email:</label>
-            <input type="email" id="email" name="mail" placeholder="Email@email.com">
+            <label class="form-label" for="Email" id="email">Email:</label>
+            <input class="form-control" type="email" id="email" name="mail" placeholder="Email@email.com">
             <br>
         </div>
         <div class="col">
             <!-- Date of Birth -->
-            <label for="DB">Date of Birth:</label>
-            <input type="date" id="DB" name="DB" required>
+            <label class="form-label" for="DB">Date of Birth:</label>
+            <input class="form-control" type="date" id="DB" name="DB" required>
             <br>
 
 
             <!-- Number Input -->
-            <label for="quantity">Number of Visits:</label>
-            <input type="number" id="quantity" name="quantity" min="1" max="100" step="1" placeholder="Enter #">
+            <label class="form-label" for="quantity">Number of Visits:</label>
+            <input class="form-control" type="number" id="quantity" name="quantity" min="1" max="100" step="1" placeholder="Enter #">
             <br>
 
             <!-- Search Input -->
-            <label for="search">Search:</label>
-            <input type="search" id="search" name="search" placeholder="Search our site...">
+            <label class="form-label" for="search">Search:</label>
+            <input class="form-control" type="search" id="search" name="search" placeholder="Search our site...">
             <br>
         </div>
         <!-- Recommendation Radio Buttons -->
@@ -91,8 +91,8 @@
             <fieldset>
                 <legend>Would you recommend this website?</legend>
                 <div class="form-check">
-                    <label><input class="form-check-label" type="radio" name="recommend" value="yes"> Yes</label>
-                    <label><input class="form-check-label" type="radio" name="recommend" value="no"> No</label>
+                    <label><input class="form-check-input" type="checkbox" name="recommend" value="yes"> Recommended</label>
+                <!--   <label><input class="form-check-input" type="checkbox" name="recommend" value="no"> No</label>-->
             </fieldset>
             <br>
         </div>
@@ -113,7 +113,7 @@
         <br>
 
         <!-- Comments Textarea -->
-        <label for="comment">Additional Comments:</label>
+        <label class="form-label" for="comment">Additional Comments:</label>
         <textarea id="comment" name="comment" rows="4" cols="50" placeholder="comment"></textarea>
         <br>
         </div>
