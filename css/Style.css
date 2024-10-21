@@ -8,13 +8,13 @@
     --navbar-outline:#d30606;
     --navbar-tab-color:#636363;
     --navbar-tab-outline:#4c57ce;
-    --header-color:#de2525;
+    --header-color:#de252586;
     --header-color-outline:#676566;
-    --header-text-color:#9c445c;
-    --header-textshadow-color:#b06d81;
-    --footbar-color:#985d98c0;
-    --footbar-outline:#814b81c0;
-    --footbar-text-color:#f4bef4;
+    --header-text-color:#ffffff;
+    --header-textshadow-color:#000000;
+    --footbar-color:#da1414c0;
+    --footbar-outline:#000000c0;
+    --footbar-text-color:#fcfcfc;
     --page-width:33vw;
     --page-height:55vh;
 }
@@ -47,8 +47,8 @@ body{
 
 a {
     text-decoration: none;
-    box-shadow: inset 0 0 0 0 #d07183;
-    color: #d07183;
+    box-shadow: inset 0 0 0 0 #060001;
+    color: #f7f2f3;
     margin: 0 -.25rem;
     padding: 0 .25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
