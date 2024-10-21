@@ -38,6 +38,42 @@ body{
     font-style: italic;
   }
 
+  ol{
+    list-style-image: url(../img/star.png);
+    color:var(--header-text-color);
+    font-weight:normal;
+}
+
+
+a {
+    text-decoration: none;
+    box-shadow: inset 0 0 0 0 #d07183;
+    color: #d07183;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+a:hover {
+     box-shadow: inset 150px 0 0 0 #d07183;
+     color:white;
+}
+
+h1{
+    color: var(--header-text-color);
+    text-shadow: 1px 3px var(--header-textshadow-color); 
+    text-transform: uppercase;
+    text-align:center;
+    letter-spacing: 1px;
+}
+
+P{
+    line-height: 2em;
+    text-align: left;
+}
+p::first-letter{
+    font-family: 'Rochester';
+    font-size: 2em;
+}
 
 
 
