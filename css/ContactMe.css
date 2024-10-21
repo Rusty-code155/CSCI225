@@ -15,6 +15,18 @@
     --page-height:55vh;
 }
 
+.instrument-serif-regular {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .instrument-serif-regular-italic {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
 body{
     background-image: url(../img/R.gif);
     background-size: 100%;
