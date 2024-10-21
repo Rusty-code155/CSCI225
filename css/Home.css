@@ -145,7 +145,7 @@ div.contact p{
 
 
 
-div.introduction, div.assignment, div.portfolio, div.schedule, div.contact{
+div.introduction, div.assignment, div.portfolio,  div.contact{
     background-color: #353636eb;
     border-right: 3px solid #030001;
     border-bottom: 3px solid #f20125;
@@ -158,6 +158,21 @@ div.introduction, div.assignment, div.portfolio, div.schedule, div.contact{
     visibility: hidden;
     transition: all 1.5s ease-out;
 }
+
+div.schedule{
+    background-color: #353636eb;
+    border-right: 3px solid #030001;
+    border-bottom: 2px solid #f20125;
+    position: absolute;
+    height:var(--page-height);
+    width: var(--page-width);
+    top:20%;
+    left: 33%;
+    padding:2px;
+    visibility: hidden;
+    transition: all 1.5s ease-out;
+}
+
 
 div.introduction{
     display:inline;
@@ -203,7 +218,7 @@ div.schedule{
 table {
     height:100%;
     width:100%;
-    table-layout: fixed;
+    table-layout: auto;
     border-collapse: collapse;
     border: 1px solid #307cee;
 }
@@ -258,3 +273,15 @@ div.introducton:hover > p, div.portfolio:hover >ol, div.schedule:hover > table, 
     visibility: visible;
     opacity: 1;
 }
+
+#audio-player-container {
+    width: 100%;
+    background: #fcfcfc;
+    padding: 20px;
+    color: #050000;
+  }
+  
+  /* Style the audio element itself */
+  #audio {
+    width: 100%;
+  }
