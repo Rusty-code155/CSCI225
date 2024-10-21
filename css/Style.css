@@ -147,8 +147,8 @@ div.contact p{
 
 div.introduction, div.assignment, div.portfolio, div.schedule, div.contact{
     background-color: #353636eb;
-    border-right: 3px solid #e8a8b2;
-    border-bottom: 3px solid #e8a8b2;
+    border-right: 3px solid #030001;
+    border-bottom: 3px solid #f20125;
     position: absolute;
     height:var(--page-height);
     width: var(--page-width);
