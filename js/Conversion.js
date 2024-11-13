@@ -2,13 +2,14 @@
 let spanE1 = document.getElementById('Input_type');
 let spanE2 = document.getElementById('Output_type');
 let Input = document.getElementById('Input');
-let Output= document.getElementById('Output');
+let Output= 0;
 console.log("spanE1 -"+spanE1);
 console.log("spanE2 -"+spanE2 );
 console.log("Input -" + Input);
 console.log("Output -" + Output);
 // element --- property
 var n1= parseFloat( Input.value);
+var n2= parseFloat( Output.value);
 var Inputindex = spanE1.selectedIndex
 var Outputindex = spanE2.selectedIndex
 console.log(typeof n1);
