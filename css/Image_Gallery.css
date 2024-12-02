@@ -1,0 +1,22 @@
+.button
+{
+    visibility: hidden;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+}
+
+
+.button:hoover
+{
+    background-color: #91969428; /* Green */
+border: none;
+color: rgb(174, 160, 160);
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+}

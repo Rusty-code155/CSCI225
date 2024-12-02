@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+    <title>CSCI 225 Homework #6 of Turner M. Peeples</title>
+    <link rel="stylesheet" href="css/Image_Gallery">
+
+    </head>
+    <body>
+        
+        <h1> Array example - Image banner</h1>
+            <div class="img-container-hide">
+                <img src="Github/img/Assignment #7 images/Blue and Gold by Barbara Matthews.jpg" alt="G"/>
+            </div>
+            <div class="img-container-hide">
+                <img src="Github/img/Assignment #7 images/random-abstract.jpg" alt="G"/>
+            </div>
+            <div class="img-container-hide">
+                <img src="Github/img/Assignment #7 images/random-hearts.jpg" alt="G" />
+            </div>
+            <div class="img-container-hide">
+                <img src="Github/img/Assignment #7 images/random-lines-1.jpg" alt="G">
+            </div>
+            <div class="img-container-hide">
+                <img src="Github/img/Assignment #7 images/random-shapes.jpg" alt="G">
+            </div>
+			<script>
+				var imglist = document.querySelectorAll('.img-container-hide');
+                imglist[0].setAttribute('class','img-container');
+                var index=0;//current image
+                //event -- change to next picture
+                function changepic()
+                {
+                    imglist[index].setAttribute('class','img-container-hide');
+                    index++;
+                    index=index%5;
+                    // show the next one
+                    imglist[index].setAttribute('class','img-container-hide');
+
+                }
+                //bind the event
+                setInterval(changepic,3000);
+                imglist[0].addEventListener('click',changepic)
+                
+                     <input type="text" id="number" value="0"/>
+                    <input type="button" onclick="incrementValue()" value="Increment Value" />
+                
+			</script>
+
+    </body>
