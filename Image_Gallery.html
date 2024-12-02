@@ -6,7 +6,8 @@
 
     </head>
     <body>
-        
+        <input type="text" id="Right arrow " value="0"/>
+        <input type="button" onclick="changepicplus()" value="Change image" />
         <h1> Array example - Image banner</h1>
             <div class="img-container-hide">
                 <img src="Github/img/Assignment #7 images/Blue and Gold by Barbara Matthews.jpg" alt="G"/>
@@ -25,10 +26,10 @@
             </div>
 			<script>
 				var imglist = document.querySelectorAll('.img-container-hide');
-                imglist[0].setAttribute('class','img-container');
+                imglist[0].setAttribute('class','img-container-hide');
                 var index=0;//current image
                 //event -- change to next picture
-                function changepic()
+                function changepicplus()
                 {
                     imglist[index].setAttribute('class','img-container-hide');
                     index++;
@@ -38,11 +39,8 @@
 
                 }
                 //bind the event
-                setInterval(changepic,3000);
-                imglist[0].addEventListener('click',changepic)
                 
-                     <input type="text" id="number" value="0"/>
-                    <input type="button" onclick="incrementValue()" value="Increment Value" />
+                     
                 
 			</script>
 
