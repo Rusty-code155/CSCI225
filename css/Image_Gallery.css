@@ -1,22 +1,113 @@
-.button
-{
-    visibility: hidden;
-padding: 15px 32px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../img/Gallery_Background.gif);
+    background-size: 100%;
+    background-attachment: fixed;
 }
 
+.gallery-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+}
 
-.button:hoover
-{
-    background-color: #91969428; /* Green */
-border: none;
-color: rgb(174, 160, 160);
-padding: 15px 32px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
+.gallery {
+    display: flex;
+    overflow: hidden;
+}
+
+.gallery-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-arrow {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.dots {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+.audio-player {
+    display: flex;
+    flex-direction: column;
+    align-items: bottom;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    justify-content: space-between
+    
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    bottom: 10;
+    
+}
+
+button:hover {
+    background-color: #b30000;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+    background-color: #97060653;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

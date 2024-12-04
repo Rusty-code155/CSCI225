@@ -2,43 +2,132 @@
 <html lang="en-us">
     <head>
     <title>CSCI 225 Homework #6 of Turner M. Peeples</title>
-    <link rel="stylesheet" href="css/Image_Gallery">
+    <link rel="stylesheet" href="css/Image_Gallery.css">
 
     </head>
     <body>
-        <input type="text" id="Right arrow " value="0"/>
-        <input type="button" onclick="changepicplus()" value="Change image" />
-        <h1> Array example - Image banner</h1>
-            <div class="img-container-hide">
-                <img src="Github/img/Assignment #7 images/Blue and Gold by Barbara Matthews.jpg" alt="G"/>
-            </div>
-            <div class="img-container-hide">
-                <img src="Github/img/Assignment #7 images/random-abstract.jpg" alt="G"/>
-            </div>
-            <div class="img-container-hide">
-                <img src="Github/img/Assignment #7 images/random-hearts.jpg" alt="G" />
-            </div>
-            <div class="img-container-hide">
-                <img src="Github/img/Assignment #7 images/random-lines-1.jpg" alt="G">
-            </div>
-            <div class="img-container-hide">
-                <img src="Github/img/Assignment #7 images/random-shapes.jpg" alt="G">
-            </div>
-			<script>
-				var imglist = document.querySelectorAll('.img-container-hide');
-                imglist[0].setAttribute('class','img-container-hide');
-                var index=0;//current image
-                //event -- change to next picture
-                function changepicplus()
-                {
-                    imglist[index].setAttribute('class','img-container-hide');
-                    index++;
-                    index=index%5;
-                    // show the next one
-                    imglist[index].setAttribute('class','img-container-hide');
+        <div class="Audio player">
+            <audio id="audio" src="../Github/audio/Color Your Night -full instrumental cover-.mp3" type="audio/mpeg"></audio>
+            <button id="play-pause" onclick="togglePlayPause()">Play</button>
+            <input type="range" id="seek-slider" value="0" max="100" step="1">
+            <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+            <button id="mute" onclick="toggleMute()">Mute</button>
+            <input type="range" id="volume-slider" value="100" max="100" step="1">
+        </div>
+        <script>
+            const audio = document.getElementById('audio');
+const playPauseButton = document.getElementById('play-pause');
+const seekSlider = document.getElementById('seek-slider');
+const currentTimeElement = document.getElementById('current-time');
+const durationElement = document.getElementById('duration');
+const muteButton = document.getElementById('mute');
+const volumeSlider = document.getElementById('volume-slider');
 
-                }
-                //bind the event
+audio.addEventListener('loadedmetadata', () => {
+    durationElement.textContent = formatTime(audio.duration);
+    seekSlider.max = audio.duration;
+});
+
+audio.addEventListener('timeupdate', () => {
+    seekSlider.value = audio.currentTime;
+    currentTimeElement.textContent = formatTime(audio.currentTime);
+});
+
+seekSlider.addEventListener('input', () => {
+    audio.currentTime = seekSlider.value;
+});
+
+volumeSlider.addEventListener('input', () => {
+    audio.volume = volumeSlider.value / 100;
+});
+
+function togglePlayPause() {
+    if (audio.paused) {
+        audio.play();
+        playPauseButton.textContent = 'Pause';
+    } else {
+        audio.pause();
+        playPauseButton.textContent = 'Play';
+    }
+}
+
+function toggleMute() {
+    audio.muted = !audio.muted;
+    muteButton.textContent = audio.muted ? 'Unmute' : 'Mute';
+}
+
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+}
+        </script>
+        <div class="gallery-container">
+            <div class="gallery">
+                <div class="gallery-item" data-index="0">
+                    <img src="img/image1.jpg" alt="Image 1">
+                    <p>A picture of some Random Flowers 1</p>
+                </div>
+                <div class="gallery-item" data-index="1">
+                    <img src="img/Image 2.jpg" alt="Image 2">
+                    <p>A Mandala reminiscent of a trip</p>
+                </div>
+                <div class="gallery-item" data-index="2">
+                    <img src="img/Image 3.jpg" alt="Image 3">
+                    <p>A collage of many differently shaped hearts</p>
+                </div>
+                <div class="gallery-item" data-index="3">
+                    <img src="img/Image 4.jpg" alt="Image 4">
+                    <p>A series of random colored lines coming together to create a series of squares</p>
+                </div>
+                <div class="gallery-item" data-index="4">
+                    <img src="img/Image 5.jpg" alt="Image 5">
+                    <p>A collection of random shapes and symbols.</p>
+                </div>
+            </div>
+            <div class="navigation">
+                <span class="nav-arrow left" onclick="prevImage()">&#10094;</span>
+                <span class="nav-arrow right" onclick="nextImage()">&#10095;</span>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="currentImage(0)"></span>
+                <span class="dot" onclick="currentImage(1)"></span>
+                <span class="dot" onclick="currentImage(2)"></span>
+                <span class="dot" onclick="currentImage(3)"></span>
+                <span class="dot" onclick="currentImage(4)"></span>
+            </div>
+        </div>
+			<script>
+				let currentIndex = 0;
+const items = document.querySelectorAll('.gallery-item');
+const dots = document.querySelectorAll('.dot');
+
+function showImage(index) {
+    items.forEach((item, i) => {
+        item.style.transform = `translateX(${-index * 100}%)`;
+        dots[i].classList.toggle('active', i === index);
+    });
+}
+
+function prevImage() {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+    showImage(currentIndex);
+}
+
+function nextImage() {
+    currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+    showImage(currentIndex);
+}
+
+function currentImage(index) {
+    currentIndex = index;
+    showImage(currentIndex);
+}
+
+showImage(currentIndex);
+                
+
+
                 
                      
                 
